@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event timer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-black relative w-full h-50">
+    <section
+      class="w-full h-50 rounded-lg flex justify-center items-center bg-white translate absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    >
+      <div class="h-30 p- 5 pt-2 bg-rose-500 rounded-lg">
+        <h1 class="p-5 text-center text-white text-[5rem] font-bold">5</h1>
+      </div>
+    </section>
+    <script>
+      let counter = document.querySelector("h1");
+      let counting = Number(counter.textContent);
+      console.log(counting);
+      let start = 0;
+      let interval = setInterval(() => {
+        console.log("interval is running");
+        counter.innerHTML = start;
+        start++;
+        if (start === counting) {
+          counter.innerHTML = counting;
+          clearInterval(interval);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

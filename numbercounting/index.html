@@ -4,13 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind</title>
-    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
-    <section class="grid-">
-        <header> hello world</header>
-        
-        </header>
+  <body class="bg-black">
+    <section class="w-screen h-screen flex gap-8 justify-center items-center">
+      <div class="text-center p-6 bg-[#2a2b3d] rounded-lg w-60 h-40">
+        <div>
+          <i class="fa-solid fa-utensils text-[#09D992] text-2xl mb-2"></i>
+        </div>
+        <h1 class="font-bold font-sans text-xl text-white pt-2">400</h1>
+        <p class="font-sans font-semibold text-gray-300 pt-2">
+          Meals Delivered
+        </p>
+      </div>
+      <div class="text-center p-6 bg-[#2a2b3d] rounded-lg w-60 h-40">
+        <div>
+          <i class="fa-solid fa-utensils text-[#09D992] text-2xl pt-2"></i>
+        </div>
+        <h1 class="font-bold font-sans text-xl text-white pt-2">340</h1>
+        <p class="font-sans font-semibold text-gray-300">happy customers</p>
+      </div>
+      <div class="text-center p-6 bg-[#2a2b3d] rounded-lg w-60 h-40">
+        <div>
+          <i class="fa-solid fa-utensils text-[#09D992] text-2xl pt-2"></i>
+        </div>
+        <h1 class="font-bold font-sans text-xl text-white pt-2">225</h1>
+        <p class="font-sans font-semibold text-gray-300 pt-2">menu items</p>
+      </div>
+      <div class="text-center p-6 bg-[#2a2b3d] rounded-lg w-60 h-40">
+        <div>
+          <i class="fa-solid fa-utensils text-[#09D992] text-2xl pt-2"></i>
+        </div>
+        <h1 class="font-bold font-sans text-xl text-white pt-2">280</h1>
+        <p class="font-sans font-semibold text-gray-300 pt-2">five Stars</p>
+      </div>
     </section>
+
+    <!-- --------------------------- javascript code --------------------------- -->
+    <script>
+      let counting = document.querySelectorAll("h1");
+      let countings = Array.from(counting);
+      console.log(countings);
+
+      // Function to animate counting
+      function animateCounter(e) {
+        let num = Number(e.textContent);
+        let i = 0;
+
+        let interval = setInterval(() => {
+          e.textContent = i;
+          console.log("inside interval, i =", i);
+          i++;
+
+          if (i > num) {
+            clearInterval(interval);
+            e.textContent = num;
+          }
+        }, 10);
+      }
+
+      // Add click event listener
+      countings.forEach((e) => {
+        e.addEventListener("click", (ef) => {
+          console.log("element clicked");
+          animateCounter(e);
+        });
+      });
+
+      // Trigger animation on page load/refresh
+      window.addEventListener("load", () => {
+        console.log("Page loaded - starting animation");
+        countings.forEach((e) => {
+          animateCounter(e);
+        });
+      });
+    </script>
   </body>
 </html>

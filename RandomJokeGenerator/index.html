@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>😂Random Joke generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#FFAD23] flex items-center justify-center w-screen h-screen">
+    <div
+      class="w-[50%] shadow-md bg-black h-80 ParentDiv flex flex-col items-center text-white p-10 rounded-md"
+    >
+      <h1 class="text-5xl mb-9 animate-bounce">😂</h1>
+      <p class="text-2xl mb-9">random joke</p>
+      <button
+        class="bg-blue-600 rounded-md mt-7 p-3 cursor-pointer hover:bg-blue-700"
+      >
+        Get Random Joke
+      </button>
+    </div>
+
+    <script>
+      let jokesList = {
+        0: "What happened when two slices of bread went on a date? It was loaf at first sight.",
+        1: "What kind of shoes to frogs wear? Open-toad sandals",
+        2: "I just built an ATM that only gives out coins. I don’t know why no one’s thought of it before: it just makes cents!",
+        3: "Did I ever tell you about the time I went mushroom foraging? It’s a story with a morel at the end.",
+        4: "What happened when two slices of bread went on a date? It was loaf at first sight.",
+        5: "Why do crabs never volunteer? Because they're shell-fish.",
+        6: "I had a quiet game of tennis today. There was no racket.",
+        7: "What's a shark's favorite saying? Man overboard!",
+      };
+
+      let jokes = document.querySelector("p");
+      let button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        let Random = Math.floor(Math.random() * 7);
+        jokes.textContent = jokesList[Random];
+        console.log(Random);
+      });
+    </script>
+  </body>
+</html>

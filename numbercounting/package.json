@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tailwindcss -i input.css -o output.css",
+    "dev": "tailwindcss -i input.css -o output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,4 +24,9 @@
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
   }
+
+ 
+
 }
+
+
