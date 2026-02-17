@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const theList = [
+        "Laurence",
+        "Svekis",
+        true,
+        35,
+        null,
+        undefined,
+        { test: "one", score: 55 },
+        ["one", "two"],
+      ];
+      let newarray = theList.pop();
+      console.log(newarray);
+      console.log(theList);
+      console.log("here");
+      newarray = theList.shift();
+      console.log(newarray);
+      console.log(theList);
+      console.log("here");
+
+      newaray = theList.unshift("first");
+      console.log(newarray);
+      console.log(theList);
+      console.log("here");
+      newarray = theList.splice(2, 6, "hello world", "last");
+      console.log(newarray);
+      console.log(theList);
+      console.log("here");
+
+      // question2
+      let products = [
+        {
+          name: "x",
+          model: "xy",
+          quantity: "xyz",
+        },
+        {
+          name: "x2",
+          model: "xy2",
+          quantity: "xyz2",
+        },
+        {
+          name: "x3",
+          model: "x03y",
+          quantity: "xyz3",
+        },
+      ];
+      console.log(products[2].quantity);
+    </script>
+  </body>
+</html>
