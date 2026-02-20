@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eventLoop</title>
+  </head>
+  <body>
+    <input type="text" />
+    <h1>device selection</h1>
+    <select name="" id="">
+      <option value="" selected disabled>choose your value</option>
+      <option value="samsung">samsung</option>
+      <option value="mi">mi</option>
+      <option value="apple">apple</option>
+      <option value="oppo">oppop</option>
+    </select>
+    <script>
+      let h1 = document.querySelector("h1");
+      let select = document.querySelector("select");
+      let inp = document.querySelector("input");
+      inp.addEventListener("input", function (dets) {
+        if (dets.data != null) {
+          let words = dets.value;
+          console.log(words);
+        }
+      });
+      select.addEventListener("click", (det) => {
+        h1.textContent = det.target.value;
+      });
+    </script>
+  </body>
+</html>

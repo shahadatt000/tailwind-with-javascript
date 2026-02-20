@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master Javascipt Concepts</title>
+  </head>
+  <body>
+    <h1 id="abcd" class="abcs">hey hey hey kaise ho</h1>
+    <h1 id="abcd" class="abcs">hey hey hey kaise ho</h1>
+    <h1 id="abcd" class="abcs">hey hey hey kaise ho</h1>
+    <a href="https://www.google.com">download now</a>
+
+    <img src="" alt="broken Image" />
+    <div>
+      <h1>1</h1>
+      <h1>2</h1>
+    </div>
+    <script>
+      let abcd = document.getElementById("abcd");
+      let abcs = document.getElementsByClassName("abcs");
+      let best = document.querySelector("h1"); //bestone
+      let bestArray = document.querySelectorAll("h1");
+      console.log(abcd);
+      console.dir(abcd);
+      console.log(best);
+      console.dir(best);
+      best.textContent = "hello harsh kaise ho";
+      best.hidden = true;
+      let a = document.querySelector("a");
+      a.href = "https.//www.google.com";
+      a.setAttribute("href", "https://www.google.com");
+      let image = document.querySelector("img");
+      img.setAttribute("src", "https://www.google.com");
+      console.log(a.getAttribute("href"));
+      a.removeAttribute("href");
+      let h6 = document.createElement("h6");
+      h6.textContent = "hello ji";
+      documment.querySelector("body").appendChild(h6);
+      documment.querySelector("body").prependChild(h6);
+      h6.remove();
+      let h1 = document.createElement("div");
+      h1.textContent = "mei bahar se aaya hu";
+      let div = document.querySelector("div");
+      div.appendChild(h1);
+      <!-- ------------------------------- styles -------------------------------- -->
+      h1.style.color = "red";
+      console.dir("h1");
+      best.style.backgroundColor = "black";
+      h1.style.textTransform = "capitalize";
+      h1.style.fontFamily = "Gilroy";
+
+      // class
+      h1.classlist.add("hulu");
+      h1.classlist.remove("hulu");
+      h1.classlist.toggle("hulu");
+    </script>
+  </body>
+</html>
